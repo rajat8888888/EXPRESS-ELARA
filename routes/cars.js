@@ -1,7 +1,7 @@
 
 const express =require('express');
 const router=express.Router();
-
+const {deletCar} =require("../controller/carControler")
 let car=[
     {id:1,name:'A'},
     {id:2,name:'B'},
@@ -50,14 +50,7 @@ router.put('/cars/:id',(req,res)=>{
 });
 
 
-router.delete('/cars/:id',(req,res)=>{
-    const{id}=req.params
-    if(!id){res.status(404).send('data is not perovided')}
-    const car=car.find((data)=>data.id===Number(id))
-    const index=car.indexOf(car)
-    car.splice(index,1)
-    return res.status(200).send(car)
-})
+router.delete('/cars/:id',deletCar)
 module.exports=router;
 
 

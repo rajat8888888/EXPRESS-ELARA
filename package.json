@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/rajat8888888/EXPRESS-ELARA#readme",
   "dependencies": {
+    "debug": "^4.3.4",
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "pug": "^3.0.2"
   }
 }
